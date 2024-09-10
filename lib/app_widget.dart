@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/splash_screen/splash_screen_page.dart';
+import 'app/pages/onboarding/onboarding_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreenPage(),
+      home: const OnboardingPage(),
     );
   }
 }
