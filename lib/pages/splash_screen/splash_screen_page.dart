@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../core/themes/app_colors.dart';
+
 class SplashScreenPage extends StatelessWidget {
   const SplashScreenPage({super.key});
 
@@ -7,7 +9,7 @@ class SplashScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: const Color.fromRGBO(0, 0, 41, 100),
+        color: AppColors.splashBackground,
         child: const Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
