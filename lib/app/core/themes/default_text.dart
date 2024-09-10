@@ -25,5 +25,9 @@ class DefaultTextApp extends TextStyle {
     super.package,
     super.overflow,
     FontWeight fontWeight = FontWeight.normal,
-  }) : super(fontWeight: fontWeight, fontSize: 16);
+    double fontSize = 20,
+  }) : super(
+          fontWeight: fontWeight,
+          fontSize: fontSize,
+        );
 }
