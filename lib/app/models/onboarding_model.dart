@@ -23,10 +23,4 @@ List<OnboardingContentModel> contents = [
     description:
         'Cadastre-se e mantenha seu perfil, pokémon favoritos, configurações e muito mais, salvos no aplicativo, mesmo sem conexão com a internet.',
   ),
-  OnboardingContentModel(
-    title: 'Está pronto para essa aventura?',
-    image: 'assets/images/onboarding3.png',
-    description:
-        'Basta criar uma conta e começar a explorar o mundo dos Pokémons hoje!',
-  ),
 ];
