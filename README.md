@@ -5,10 +5,12 @@ Pokedéx Status
 [X] - Criar SplashScreen 
 [ ] - Colocar a SplashScreen funcional 
 [X] - Criar a Onboarding screen 
-[ ] - Colocar funcional a Onboarding Screen 
+[X] - Colocar funcional a Onboarding Screen 
 [X] - Criar o Model Onboarding Screen
-
-
+[X] - Implementar as rotas com GoRouter
+[X] - Criar a Login or Register Page 
+[X] - Implementar as rotas de login e register
+[ ] - 
 ________________________________________________________________________________
  Fonts App Poppins 
  	•	FontWeight.w400 for Regular
