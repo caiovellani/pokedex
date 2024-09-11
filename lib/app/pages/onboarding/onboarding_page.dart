@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/themes/app_colors.dart';
 import '../../core/themes/default_text.dart';
 import '../../models/onboarding_model.dart';
+import '../auth/login_or_register.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
+
+  static String get route => '/onboarding';
 
   @override
   State<OnboardingPage> createState() => _OnboardingPageState();
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
-  int currentIndex = 0;
+  int _currentIndex = 0;
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +29,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
             Expanded(
               flex: 1,
               child: PageView.builder(
+                controller: _pageController,
                 itemCount: contents.length,
                 onPageChanged: (int index) {
                   setState(() {
-                    currentIndex = index;
+                    _currentIndex = index;
                   });
                 },
                 itemBuilder: (_, i) {
@@ -60,26 +66,51 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             color: AppColors.grey6,
                           ),
                         ),
+                        const SizedBox(height: 40),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: List.generate(
+                            contents.length,
+                            (index) => buildDot(index, context),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 58,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                            ),
+                            onPressed: () {
+                              if (_currentIndex == contents.length - 1) {
+                                context.go(LoginOrRegister.route);
+                              } else {
+                                _pageController.nextPage(
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.easeInOut,
+                                );
+                              }
+                            },
+                            child: Text(
+                              style: const DefaultTextApp(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                                color: AppColors.white,
+                              ),
+                              _currentIndex == contents.length - 1
+                                  ? 'Continuar'
+                                  : 'Vamos começar!',
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   );
                 },
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                contents.length,
-                (index) => buildDot(index, context),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                'Entrar',
-                style: TextStyle(
-                  fontSize: 50,
-                ),
               ),
             ),
           ],
@@ -91,11 +122,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Container buildDot(int index, BuildContext context) {
     return Container(
       height: 10,
-      width: currentIndex == index ? 28 : 10,
+      width: _currentIndex == index ? 28 : 10,
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: currentIndex == index ? AppColors.blue : AppColors.lightBlue,
+        color: _currentIndex == index ? AppColors.blue : AppColors.lightBlue,
       ),
     );
   }
