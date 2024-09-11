@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'app/pages/onboarding/onboarding_page.dart';
+import 'app/routes/router.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       key: key,
       title: 'Pokédex',
       theme: ThemeData(
         fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnboardingPage(),
+      routerConfig: AppRouter.router,
     );
   }
 }

@@ -5,6 +5,8 @@ import '../../core/themes/app_colors.dart';
 class SplashScreenPage extends StatelessWidget {
   const SplashScreenPage({super.key});
 
+  static String get route => '/splashscreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
