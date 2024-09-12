@@ -63,7 +63,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           style: const DefaultTextApp(
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
-                            color: AppColors.grey6,
+                            color: AppColors.grey600,
                           ),
                         ),
                         const SizedBox(height: 40),
