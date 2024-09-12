@@ -10,12 +10,12 @@ class CustomElevatedButton extends StatelessWidget {
   });
 
   final Text text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width,
       height: 58,
       child: ElevatedButton(
         onPressed: onPressed,
