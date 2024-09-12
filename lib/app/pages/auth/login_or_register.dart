@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 import '../../core/components/custom_elevated_button.dart';
 import '../../core/constants/images_constants.dart';
@@ -22,31 +21,6 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: Row(
-              children: [
-                const Text(
-                  'Pular',
-                  style: DefaultTextApp(
-                    fontSize: 18,
-                    color: AppColors.black,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () => context.go(LoginPage.route),
-                  icon: const Icon(
-                    PhosphorIconsBold.arrowRight,
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SafeArea(
@@ -73,7 +47,7 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
                 'Basta criar uma conta e começar a explorar o mundo dos Pokémons hoje!',
                 style: DefaultTextApp(
                   fontWeight: FontWeight.w400,
-                  color: AppColors.grey6,
+                  color: AppColors.grey600,
                   fontSize: 16,
                 ),
               ),
