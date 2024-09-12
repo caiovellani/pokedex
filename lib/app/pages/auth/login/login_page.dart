@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-import '../../core/components/auth_elevated_button.dart';
-import '../../core/components/custom_elevated_button.dart';
-import '../../core/constants/images_constants.dart';
-import '../../core/themes/app_colors.dart';
-import '../../core/themes/default_text.dart';
+import '../../../core/components/auth_elevated_button.dart';
+import '../../../core/components/custom_elevated_button.dart';
+import '../../../core/constants/images_constants.dart';
+import '../../../core/themes/app_colors.dart';
+import '../../../core/themes/default_text.dart';
+import '../login_or_register.dart';
 import 'login_email_page.dart';
-import 'login_or_register.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

@@ -5,8 +5,8 @@ import '../../core/components/custom_elevated_button.dart';
 import '../../core/constants/images_constants.dart';
 import '../../core/themes/app_colors.dart';
 import '../../core/themes/default_text.dart';
-import 'login_page.dart';
-import 'register_page.dart';
+import 'login/login_page.dart';
+import 'register/register_page.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});

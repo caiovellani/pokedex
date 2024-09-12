@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
 
-import '../pages/auth/login_email_page.dart';
+import '../pages/auth/login/login_email_page.dart';
+import '../pages/auth/login/login_page.dart';
 import '../pages/auth/login_or_register.dart';
-import '../pages/auth/login_page.dart';
-import '../pages/auth/register_page.dart';
+import '../pages/auth/register/register_page.dart';
 import '../pages/onboarding/onboarding_page.dart';
 import '../pages/splash_screen/splash_screen_page.dart';
 
