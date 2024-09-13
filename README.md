@@ -11,9 +11,14 @@ Pokedéx Status
 [X] - Criar a Login or Register Page 
 [X] - Implementar as rotas de login e register
 [X] - Criar Login Page
+[X] - Criar Login Page com E-mail
 [ ] - Implementar Sistema de Login Firebase E-Mail
+[ ] - Criar Página de esqueceu sua senha
+[ ] - Implementar Lógica de esqueceu a senha 
 [ ] - Implementar Sistema de Login Google
 [ ] - Implementar Sistema de Login Apple
+[ ] - Criar Página Load Login;
+[X] - Criar Página Login Succees;
 
 
 
