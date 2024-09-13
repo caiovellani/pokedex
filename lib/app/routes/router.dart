@@ -1,7 +1,9 @@
 import 'package:go_router/go_router.dart';
 
+import '../pages/auth/forgot_password/forgot_password.dart';
 import '../pages/auth/login/login_email_page.dart';
 import '../pages/auth/login/login_page.dart';
+import '../pages/auth/login/login_success.dart';
 import '../pages/auth/login_or_register.dart';
 import '../pages/auth/register/register_page.dart';
 import '../pages/onboarding/onboarding_page.dart';
@@ -34,6 +36,14 @@ abstract class AppRouter {
       GoRoute(
         path: LoginEmailPage.route,
         builder: (context, state) => const LoginEmailPage(),
+      ),
+      GoRoute(
+        path: ForgotPassword.route,
+        builder: (context, state) => const ForgotPassword(),
+      ),
+      GoRoute(
+        path: LoginSuccess.route,
+        builder: (context, state) => const LoginSuccess(),
       ),
     ],
   );
