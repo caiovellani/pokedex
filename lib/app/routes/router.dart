@@ -5,7 +5,8 @@ import '../pages/auth/login/login_email_page.dart';
 import '../pages/auth/login/login_page.dart';
 import '../pages/auth/login/login_success.dart';
 import '../pages/auth/login_or_register.dart';
-import '../pages/auth/register/register_page.dart';
+import '../pages/auth/register/pages/initial_register_page.dart';
+import '../pages/auth/register/pages/register_page.dart';
 import '../pages/onboarding/onboarding_page.dart';
 import '../pages/splash_screen/splash_screen_page.dart';
 
@@ -44,6 +45,10 @@ abstract class AppRouter {
       GoRoute(
         path: LoginSuccess.route,
         builder: (context, state) => const LoginSuccess(),
+      ),
+      GoRoute(
+        path: InitialRegisterPage.route,
+        builder: (context, state) => const InitialRegisterPage(),
       ),
     ],
   );
