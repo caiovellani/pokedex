@@ -7,4 +7,5 @@ abstract class ImagesConstants {
   static const String appleLogo = 'assets/images/apple_logo.png';
   static const String googleLogo = 'assets/images/google_logo.png';
   static const String loginSuccess = 'assets/images/login_success.png';
+  static const String createAccount = 'assets/images/create_account.png';
 }
