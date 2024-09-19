@@ -6,24 +6,28 @@ import '../themes/default_text.dart';
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
     super.key,
-    required this.controller,
+    this.controller,
     required this.hintText,
     this.obscureText = false,
     this.textInputType,
     this.suffixIcon,
+    this.error,
   });
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String hintText;
   final bool obscureText;
   final TextInputType? textInputType;
   final Widget? suffixIcon;
+  final String? error;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
+  // late bool obscureText = widget.obscureText;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -32,7 +36,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
         obscureText: widget.obscureText,
         keyboardType: widget.textInputType,
         decoration: InputDecoration(
+          errorText: widget.error,
           suffixIcon: widget.suffixIcon,
+          errorBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.red,
+              width: 2,
+            ),
+          ),
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: AppColors.grey400,
