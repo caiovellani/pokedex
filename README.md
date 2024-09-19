@@ -19,6 +19,9 @@ Pokedéx Status
 [ ] - Implementar Sistema de Login Apple
 [ ] - Criar Página Load Login;
 [X] - Criar Página Login Succees;
+[X] - Criar Página inicial de Criar conta
+[X] - Criar página de criar conta com email 
+[ ] - Salvar e Criar conta com email Firebase
 
 
 
