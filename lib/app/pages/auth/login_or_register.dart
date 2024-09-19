@@ -6,7 +6,7 @@ import '../../core/constants/images_constants.dart';
 import '../../core/themes/app_colors.dart';
 import '../../core/themes/default_text.dart';
 import 'login/login_page.dart';
-import 'register/register_page.dart';
+import 'register/pages/initial_register_page.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});
@@ -53,15 +53,8 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
               ),
               const SizedBox(height: 32),
               CustomElevatedButton(
-                onPressed: () => context.go(RegisterPage.route),
-                text: const Text(
-                  'Criar conta',
-                  style: DefaultTextApp(
-                    fontSize: 18,
-                    color: AppColors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+                onPressed: () => context.push(InitialRegisterPage.route),
+                text: 'Criar conta',
               ),
               const SizedBox(height: 16),
               TextButton(

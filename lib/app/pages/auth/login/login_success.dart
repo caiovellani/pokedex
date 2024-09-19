@@ -41,13 +41,7 @@ class LoginSuccess extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               CustomElevatedButton(
-                text: const Text(
-                  'Continuar',
-                  style: DefaultTextApp(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.white),
-                ),
+                text: 'Continuar',
                 onPressed: () {},
               )
             ],

@@ -24,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           'Entrar',
           style: DefaultTextApp(
@@ -71,12 +72,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(height: 32),
-              // AuthElevatedButton(
-              //   icon: Icon(PhosphorIcons.appleLogo()),
-              //   onPressed: () {},
-              //   child: const Text('Continuar com a Apple'),
-              // ),
-              const SizedBox(height: 12),
               AuthElevatedButton(
                 imagePath: ImagesConstants.appleLogo,
                 text: const Text(
@@ -104,14 +99,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 12),
               CustomElevatedButton(
-                text: const Text(
-                  'Continuar com um e-mail',
-                  style: DefaultTextApp(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.white,
-                  ),
-                ),
+                text: 'Continuar com um e-mail?',
                 onPressed: () => context.go(LoginEmailPage.route),
               )
             ],

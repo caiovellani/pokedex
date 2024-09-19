@@ -56,6 +56,7 @@ class _LoginEmailPageState extends State<LoginEmailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text(
           'Entrar',
           style: DefaultTextApp(
@@ -163,14 +164,7 @@ class _LoginEmailPageState extends State<LoginEmailPage> {
                 builder: (context, isFormValid, child) {
                   return CustomElevatedButton(
                     color: isFormValid ? AppColors.blue : AppColors.grey400,
-                    text: const Text(
-                      'Entrar',
-                      style: DefaultTextApp(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    text: 'Entrar',
                     onPressed: isFormValid
                         ? () => context.go(LoginSuccess.route)
                         : null,
