@@ -11,7 +11,7 @@ class CustomElevatedButton extends StatelessWidget {
   });
 
   final Color? color;
-  final Text text;
+  final String text;
   final VoidCallback? onPressed;
 
   @override
@@ -22,12 +22,19 @@ class CustomElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
+          foregroundColor: AppColors.white,
+          textStyle: const TextStyle(
+            fontFamily: 'Poppins',
+            color: AppColors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+          ),
           backgroundColor: AppColors.blue,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
         ),
-        child: text,
+        child: Text(text),
       ),
     );
   }
