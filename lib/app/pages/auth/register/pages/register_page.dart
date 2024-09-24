@@ -7,6 +7,7 @@ import '../../../../core/themes/app_colors.dart';
 import '../../../../core/themes/default_text.dart';
 import '../components/register_step_content.dart';
 import '../enum/user_register_enum.dart';
+import 'initial_register_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -100,6 +101,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       duration: const Duration(milliseconds: 300),
                       curve: Curves.ease);
                   return;
+                } else {
+                  context.go(InitialRegisterPage.route);
                 }
                 context.pop();
               },
