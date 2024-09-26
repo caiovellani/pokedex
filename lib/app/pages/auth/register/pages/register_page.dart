@@ -8,6 +8,7 @@ import '../../../../core/themes/default_text.dart';
 import '../components/register_step_content.dart';
 import '../enum/user_register_enum.dart';
 import 'initial_register_page.dart';
+import 'register_page_success.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -47,6 +48,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
       if (emailError != null || passwordError != null || nameError != null) {
         return;
+      }
+
+      if (currentStep == UserRegisterStep.name) {
+        context.go(RegisterPageSuccess.route);
       }
 
       scrollController.nextPage(
@@ -105,8 +110,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   context.go(InitialRegisterPage.route);
                 }
               },
-              icon:
-                  const Icon(PhosphorIconsBold.arrowLeft), // icon: const Icon(
+              icon: const Icon(
+                PhosphorIconsBold.arrowLeft,
+              ),
             ),
           ),
         ),
@@ -178,9 +184,12 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
         ),
         persistentFooterButtons: [
-          CustomElevatedButton(
-            text: 'Continuar',
-            onPressed: _nextStep,
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: CustomElevatedButton(
+              text: 'Continuar',
+              onPressed: _nextStep,
+            ),
           ),
         ],
       ),
