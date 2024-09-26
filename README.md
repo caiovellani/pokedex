@@ -22,6 +22,12 @@ Pokedéx Status
 [X] - Criar Página inicial de Criar conta
 [X] - Criar página de criar conta com email 
 [ ] - Salvar e Criar conta com email Firebase
+[ ] - Criar página Registro Sucesso
+[ ] - Criar Telas do Perfil 
+[ ] - Trocar nome Perfil 
+[ ] - Trocar senha Perfil 
+[ ] - Confirmar e-mail 
+
 
 
 
