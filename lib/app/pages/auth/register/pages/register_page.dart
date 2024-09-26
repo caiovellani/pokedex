@@ -104,7 +104,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 } else {
                   context.go(InitialRegisterPage.route);
                 }
-                context.pop();
               },
               icon:
                   const Icon(PhosphorIconsBold.arrowLeft), // icon: const Icon(
