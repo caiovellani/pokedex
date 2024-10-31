@@ -2,8 +2,14 @@
 Pokedéx Status
 
 [ ] - Adicionar o ícone do App 
+
+
 [X] - Criar SplashScreen 
+
+
 [X] - Colocar a SplashScreen funcional 
+
+
 [X] - Criar a Onboarding screen 
 [X] - Colocar funcional a Onboarding Screen 
 [X] - Criar o Model Onboarding Screen
@@ -27,9 +33,6 @@ Pokedéx Status
 [ ] - Trocar nome Perfil 
 [ ] - Trocar senha Perfil 
 [ ] - Confirmar e-mail 
-
-
-
 
 
 ________________________________________________________________________________
